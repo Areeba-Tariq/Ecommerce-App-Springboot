@@ -66,6 +66,7 @@ https://pk.sapphireonline.pk/products/sfde-lx23v8-6-1
 https://e-commerce14.odoo.com/web#action=56&model=res.partner&view_type=kanban&menu_id=182&cids=1
 <img width="722" alt="image" src="https://github.com/Areeba-Tariq/Ecommerce-App-Springboot/assets/102314527/78da5c54-0fe9-43f0-98f3-7514b9e1cfca"><br/>
 - Update button on Products page, which allows admin to update the product details<br/>
+Junit tests:
 Admin Controller Tests:
 The AdminControllerTest class focuses on testing the behavior of the `AdminController` class. It covers scenarios such as admin login validation, category addition, deletion, and updating functionalities, and the addition, updating, and removal of products.
 
