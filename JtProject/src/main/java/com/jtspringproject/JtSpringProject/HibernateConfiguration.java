@@ -17,16 +17,15 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class HibernateConfiguration {
     @Value("${db.driver}")
     private String DRIVER;
- 
-    @Value("root123")
+
+    @Value("12345678")
     private String PASSWORD;
- 
-    @Value("${db.url}")
+
+    @Value("jdbc:mysql://db4free.net:3306/ecommjava1")
     private String URL;
- 
-    @Value("root")
+
+    @Value("tayyabanees")
     private String USERNAME;
- 
     @Value("${hibernate.dialect}")
     private String DIALECT;
  
