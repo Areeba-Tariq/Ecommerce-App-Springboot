@@ -26,6 +26,17 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Print Working Directory
+      run: |
+        Write-Host "Current Directory: $(Get-Location)"
+        Write-Host "GITHUB_WORKSPACE: $env:GITHUB_WORKSPACE"
+
+    - name: Build with Maven
+      run: |
+        $projectPath = $env:GITHUB_WORKSPACE + '\E-commerce-project-springBoot\E-commerce-project-springBoot\JtProject'
+        Set-Location -Path $projectPath
+        .\mvnw -B package
+
     - name: Build with Maven
       run: |
           $projectPath = $env:GITHUB_WORKSPACE + '\E-commerce-project-springBoot\E-commerce-project-springBoot\JtProject'
