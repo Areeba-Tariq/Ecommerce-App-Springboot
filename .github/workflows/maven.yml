@@ -31,11 +31,13 @@ jobs:
 
     - name: Change to Project Directory
       run: cd JtProject
-
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-      working-directory: JtProject
       
-    - name: Run All Tests
-      run: mvn test
-      working-directory: JtProject
+    - name: Navigate to Project Directory
+      run: |
+        cd E-commerce-project-springBoot\E-commerce-project-springBoot\JtProject
+        Write-Host "Current Directory: $(Get-Location)"
+
+    - name: Build and Test with Maven
+      run: |
+        .\mvn -B clean package
+        .\mvn -B test
