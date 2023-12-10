@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTests" time="7.937" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="6.626" tests="30" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,5 +60,34 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="contextLoads" classname="com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTests" time="0.009"/>
+  <testcase name="testPostproduct" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="1.002"/>
+  <testcase name="testAddCategory2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.293"/>
+  <testcase name="testAddCategory3" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.053"/>
+  <testcase name="testUpdateCategory2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.099"/>
+  <testcase name="testGetproduct" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.017"/>
+  <testcase name="testAddCategory" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.063"/>
+  <testcase name="testUpdateproduct" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.179"/>
+  <testcase name="testRemoveProduct" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.085"/>
+  <testcase name="testIndex" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.06"/>
+  <testcase name="testPostproduct2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.105"/>
+  <testcase name="testAdminlogin2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.103"/>
+  <testcase name="testAdminlogin3" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.07"/>
+  <testcase name="testAdminlogin4" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.1"/>
+  <testcase name="testProfileDisplay" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="1.161"/>
+  <testcase name="testUpdateCategory" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.025"/>
+  <testcase name="testAdminlog" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.016"/>
+  <testcase name="testAdminlogin" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.136"/>
+  <testcase name="testUpdateProduct" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.17"/>
+  <testcase name="testProfileDisplay2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.148"/>
+  <testcase name="testAdminlog2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.035"/>
+  <testcase name="testGetCustomerDetail2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.133"/>
+  <testcase name="testAddProduct" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.052"/>
+  <testcase name="testRemoveCategoryDb" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.051"/>
+  <testcase name="testGetcategory" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.027"/>
+  <testcase name="testIndex2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.074"/>
+  <testcase name="testReturnIndex2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.042"/>
+  <testcase name="testAddProduct2" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.052"/>
+  <testcase name="testAddProduct3" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.054"/>
+  <testcase name="testRemoveCustomer" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.03"/>
+  <testcase name="testReturnIndex" classname="com.jtspringproject.JtSpringProject.controller.AdminControllerTest" time="0.03"/>
 </testsuite>

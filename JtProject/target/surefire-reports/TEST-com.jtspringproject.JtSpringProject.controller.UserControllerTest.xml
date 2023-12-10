@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTests" time="7.937" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="1.643" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,5 +60,24 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="contextLoads" classname="com.jtspringproject.JtSpringProject.JtSpringProjectApplicationTests" time="0.009"/>
+  <testcase name="testGetproduct" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.038"/>
+  <testcase name="testGetLogin" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.032"/>
+  <testcase name="testBuy" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.005"/>
+  <testcase name="testTest" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.008"/>
+  <testcase name="testRegisterUser" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.005"/>
+  <testcase name="testGetCart" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.026"/>
+  <testcase name="testUpdateUserProfile2" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.045"/>
+  <testcase name="testNewUseRegister" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.1"/>
+  <testcase name="testAdminHome2" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.03"/>
+  <testcase name="testDeleteCartProduct" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.027"/>
+  <testcase name="testUpdateUserProfile" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.021"/>
+  <testcase name="testGetproduct2" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.05"/>
+  <testcase name="testAdminHome" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.061"/>
+  <testcase name="testAddToCart" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.053"/>
+  <testcase name="testUserlogin" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.042"/>
+  <testcase name="testUserlogin2" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.131"/>
+  <testcase name="testUserlogin3" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.07"/>
+  <testcase name="testUserlogin4" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.07"/>
+  <testcase name="testUserlogin5" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.043"/>
+  <testcase name="testGetUserProfile" classname="com.jtspringproject.JtSpringProject.controller.UserControllerTest" time="0.072"/>
 </testsuite>
