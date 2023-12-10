@@ -34,7 +34,7 @@ jobs:
       
     - name: Navigate to Project Directory
       run: |
-        cd E-commerce-project-springBoot\E-commerce-project-springBoot\JtProject
+        cd ./E-commerce-project-springBoot/E-commerce-project-springBoot/JtProject
         Write-Host "Current Directory: $(Get-Location)"
 
     - name: Build and Test with Maven
