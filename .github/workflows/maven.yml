@@ -28,9 +28,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: |
-        cd JtProject
+        cd F:\Semester 5\SQE\SQE Term Project\E-commerce-project-springBoot\E-commerce-project-springBoot\JtProject
         ./mvnw -B package
     - name: Run All Tests
       run: |
-        cd JtProject
+        cd F:\Semester 5\SQE\SQE Term Project\E-commerce-project-springBoot\E-commerce-project-springBoot\JtProject
         ./mvnw test
