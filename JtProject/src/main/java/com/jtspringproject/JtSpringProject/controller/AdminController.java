@@ -73,22 +73,25 @@ public class AdminController {
 		return "adminlogin";
 	}
 	@RequestMapping(value = "loginvalidate", method = RequestMethod.POST)
-	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
+	public ModelAndView adminlogin(@RequestParam("username") String username, @RequestParam("password") String pass) {
+		ModelAndView mv = new ModelAndView("adminlogin");
 
-		User user=this.userService.checkLogin(username, pass);
+		User user = this.userService.checkLogin(username, pass);
 
-		if(user.getRole().equals("ROLE_ADMIN")) {
-			ModelAndView mv = new ModelAndView("adminHome");
-			adminlogcheck=1;
+		if (user != null && "ROLE_ADMIN".equals(user.getRole())) {
+			// Valid admin login
+			adminlogcheck = 1;
+			mv.setViewName("adminHome");
 			mv.addObject("admin", user);
-			return mv;
+		} else {
+			// Invalid credentials
+			mv.addObject("message", "Invalid credentials. Please try again.");
 		}
-		else {
-			ModelAndView mv = new ModelAndView("adminlogin");
-			mv.addObject("msg", "Please enter correct username and password");
-			return mv;
-		}
+
+		return mv;
 	}
+
+
 	@GetMapping("categories")
 	public ModelAndView getcategory() {
 		if(adminlogcheck==0){
@@ -190,17 +193,42 @@ public class AdminController {
 		Product product = this.productService.getProduct(id);
 		List<Category> categories = this.categoryService.getCategories();
 
-		mView.addObject("categories",categories);
+		mView.addObject("categories", categories);
 		mView.addObject("product", product);
 		return mView;
 	}
 
-	@RequestMapping(value = "products/update/{id}",method=RequestMethod.POST)
-	public String updateProduct(@PathVariable("id") int id ,@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage)
-	{
+	@RequestMapping(value = "products/update/{id}", method = RequestMethod.POST)
+	public String updateProduct(@PathVariable("id") int id,
+								@RequestParam("name") String name,
+								@RequestParam("categoryid") int categoryId,
+								@RequestParam("price") int price,
+								@RequestParam("weight") int weight,
+								@RequestParam("quantity") int quantity,
+								@RequestParam("description") String description,
+								@RequestParam("productImage") String productImage) {
 
-//		this.productService.updateProduct();
-		return "redirect:/admin/products";
+		// Retrieve the existing product
+		Product productToUpdate = productService.getProduct(id);
+		if (productToUpdate != null) {
+			// Update the product details
+			productToUpdate.setName(name);
+			productToUpdate.setCategory(categoryService.getCategory(categoryId));
+			productToUpdate.setPrice(price);
+			productToUpdate.setWeight(weight);
+			productToUpdate.setQuantity(quantity);
+			productToUpdate.setDescription(description);
+			productToUpdate.setImage(productImage);
+
+			// Call the productService to persist the updated product
+			productService.updateProduct(id, productToUpdate);
+
+			// Redirect to the product list page
+			return "redirect:/admin/products";
+		} else {
+			// Product with the specified id not found, handle appropriately
+			return "redirect:/admin/products"; // or redirect to an error page
+		}
 	}
 
 	@GetMapping("products/delete")
@@ -238,15 +266,15 @@ public class AdminController {
 		return "redirect:/admin/customers";
 	}
 	//end of code addition
-
-	@GetMapping("/user-profile")
+	/*@GetMapping("/user-profile")
 	public String profileDisplay(Model model) {
+
 		String displayusername,displaypassword,displayemail,displayaddress;
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","");
-			PreparedStatement stmt = con.prepareStatement("select * from users where username = ?"+";");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","root123");
+			PreparedStatement stmt = con.prepareStatement("select * from customer where username = ?"+";");
 			stmt.setString(1, usernameforclass);
 			ResultSet rst = stmt.executeQuery();
 
@@ -270,6 +298,6 @@ public class AdminController {
 		}
 		System.out.println("Hello");
 		return "updateProfile";
-	}
+	}*/
 
 }

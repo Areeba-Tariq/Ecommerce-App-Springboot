@@ -120,19 +120,13 @@ public class UserController{
 
 		return "userLogin";
 	}
-	@RequestMapping(value = "userloginvalidate", method = RequestMethod.POST)//Modified
-	public ModelAndView userlogin( @RequestParam("username") String username, @RequestParam("password") String pass,Model model,HttpServletResponse res,HttpSession session) {
-
-		System.out.println(pass);
+	@RequestMapping(value = "userloginvalidate", method = RequestMethod.POST)
+	public ModelAndView userlogin( @RequestParam("username") String username, @RequestParam("password") String pass,Model model,HttpServletResponse res) {
 		User u = this.userService.checkLogin(username, pass);
-		System.out.println(u.getUsername());
-		if(u.getUsername().equals(username)) {
-
+		if(u != null && u.getUsername() != null && u.getUsername().equals(username)) {
 			res.addCookie(new Cookie("username", u.getUsername()));
-			// Add the user to the session
-			session.setAttribute("user", u);
-			sessionData.setCurrentUser(u);
-			ModelAndView mView  = new ModelAndView("uproduct");
+			res.addCookie(new Cookie("cutomerid", String.valueOf(u.getId())));
+			ModelAndView mView  = new ModelAndView("index");
 			mView.addObject("user", u);
 			List<Product> products = this.productService.getProducts();
 
@@ -141,10 +135,9 @@ public class UserController{
 			} else {
 				mView.addObject("products", products);
 			}
-			System.out.println("Model: "+mView.toString());
 			return mView;
 
-		} else {
+		}else {
 			ModelAndView mView = new ModelAndView("userLogin");
 			mView.addObject("msg", "Please enter correct email and password");
 			return mView;
